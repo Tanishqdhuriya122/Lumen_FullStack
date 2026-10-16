@@ -1,0 +1,123 @@
+@import "tailwindcss";
+
+@theme {
+  /* Defaults = dark theme — black & white, YouTube-style */
+  --color-background: #0f0f0f;
+  --color-surface: #181818;
+  --color-surface-light: #272727;
+  --color-border: #3f3f3f;
+
+  --color-primary: #f1f1f1;
+  --color-primary-hover: #ffffff;
+  --color-primary-dark: #d9d9d9;
+
+  --color-accent: #ff0000;
+
+  --color-danger: #ff4e45;
+  --color-danger-hover: #ff6b63;
+
+  --color-text-primary: #f1f1f1;
+  --color-text-secondary: #aaaaaa;
+  --color-text-muted: #717171;
+
+  --color-on-primary: #0f0f0f;
+}
+
+/* Light theme overrides — applied when <html data-theme="light"> is set.
+   Buttons invert (black-on-white here, white-on-black in dark mode above)
+   while the red accent stays exactly the same fixed value in both — a
+   constant brand signature rather than something that adjusts per-theme. */
+[data-theme='light'] {
+  --color-background: #ffffff;
+  --color-surface: #ffffff;
+  --color-surface-light: #f2f2f2;
+  --color-border: #e5e5e5;
+
+  --color-primary: #0f0f0f;
+  --color-primary-hover: #272727;
+  --color-primary-dark: #000000;
+
+  --color-accent: #ff0000;
+
+  --color-danger: #cc0000;
+  --color-danger-hover: #ff0000;
+
+  --color-text-primary: #0f0f0f;
+  --color-text-secondary: #606060;
+  --color-text-muted: #909090;
+
+  --color-on-primary: #ffffff;
+}
+
+body {
+  background-color: var(--color-background);
+  color: var(--color-text-primary);
+  transition: background-color 0.25s ease, color 0.25s ease;
+}
+
+@keyframes pulse-ring {
+  0% {
+    transform: scale(0.3);
+    opacity: 0.8;
+  }
+  100% {
+    transform: scale(2.2);
+    opacity: 0;
+  }
+}
+
+.animate-pulse-ring {
+  animation: pulse-ring 1.8s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+@keyframes toast-in {
+  from {
+    opacity: 0;
+    transform: translateY(12px) scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+/* .scrollbar-hide {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+} */
+
+.animate-toast-in {
+  animation: toast-in 0.25s cubic-bezier(0.22, 1, 0.36, 1);
+}
+/* ---------- Background image support ---------- */
+:root {
+  --bg-scrim: transparent;               /* no tint, image shows at full clarity */
+  --nav-bg: rgba(10, 10, 15, 0.25);
+  --nav-border: rgba(255, 255, 255, 0.08);
+}
+
+[data-theme='light'] {
+  --bg-scrim: transparent;
+  --nav-bg: rgba(255, 255, 255, 0.25);
+  --nav-border: rgba(0, 0, 0, 0.06);
+}
+
+/* Solid canvas color so there's no white flash before the image layer mounts */
+html { background-color: #0a0a0f; }
+html[data-theme='light'] { background-color: #faf9f7; }
+
+/* While the background layer is mounted, every `bg-background` in the app
+   becomes transparent so the image shows through. No page edits needed. */
+html[data-has-bg='true'] {
+  --color-background: transparent;
+}
+
+.glass-nav {
+  background: var(--nav-bg);
+  -webkit-backdrop-filter: blur(16px) saturate(140%);
+  backdrop-filter: blur(16px) saturate(140%);
+  border-bottom: 1px solid var(--nav-border);
+}
