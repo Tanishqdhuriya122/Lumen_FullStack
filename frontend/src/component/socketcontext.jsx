@@ -2,6 +2,7 @@ import React, { createContext, useContext, useEffect, useRef, useState } from 'r
 import { io } from 'socket.io-client';
 import { useAuth } from './authcontext';
 import { refreshAccessToken } from '../utils/axiosSetup';
+import { API_BASE } from '../config';
 
 const SocketContext = createContext();
 
