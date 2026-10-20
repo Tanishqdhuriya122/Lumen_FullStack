@@ -2,7 +2,7 @@ import React, { useEffect, useRef, useState, useCallback } from 'react';
 import { Link } from 'react-router-dom';
 import axios from 'axios';
 import Hls from 'hls.js';
-import { getHlsUrl } from './getHlsurl';
+import { getHlsUrl } from './getHlsUrl';
 
 const formatTime = (seconds) => {
   if (!isFinite(seconds) || seconds < 0) return '0:00';
