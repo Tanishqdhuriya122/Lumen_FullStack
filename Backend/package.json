@@ -6,6 +6,7 @@
   "type": "module",
   "scripts": {
     "dev": "nodemon -r dotenv/config  src/index.js",
+    "start": "node src/index.js",
     "test": "cross-env NODE_OPTIONS=--experimental-vm-modules jest --runInBand"
   },
   "jest": {
