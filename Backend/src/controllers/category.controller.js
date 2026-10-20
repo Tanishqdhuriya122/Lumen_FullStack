@@ -1,5 +1,5 @@
-import { asyncHandler } from "../utils/asynchandler.js";
-import { ApiResponse } from "../utils/apiresponse.js";
+import { asynchandler } from "../utils/asynchandler.js";
+import { apiresponse } from "../utils/apiresponse.js";
 import { categoryService } from "../services/categoryService.js";
 
 export const createCategory = asyncHandler(async (req, res) => {
