@@ -4,7 +4,7 @@ import {Video} from "../models/video.model.js"
 import {Like} from "../models/like.model.js"
 import {User} from "../models/user.model.js"
 import {apierror} from "../utils/apierror.js"
-import {apiresponse} from "../utils/ApiResponse.js"
+import {apiresponse} from "../utils/apiresponse.js"
 import {asynchandler} from "../utils/asynchandler.js"
 import {uploadOnCloudinary, getOptimizedUrl} from "../utils/cloudinary.js"
 import { Subscription } from "../models/subscriptions.model.js";

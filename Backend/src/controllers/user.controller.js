@@ -3,7 +3,7 @@ import { apierror } from "../utils/apierror.js";
 import validator from "validator";
 import {User} from "../models/user.model.js";
 import { uploadOnCloudinary } from "../utils/cloudinary.js";
-import { apiresponse } from "../utils/ApiResponse.js";
+import { apiresponse } from "../utils/apiresponse.js";
 import jwt from "jsonwebtoken";
 import { Video } from "../models/video.model.js";
 import mongoose from "mongoose";
