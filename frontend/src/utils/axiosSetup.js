@@ -1,4 +1,5 @@
 import axios from 'axios';
+import { API_BASE } from '../config';
 
 const API_ORIGIN = `${API_BASE}`;
 
