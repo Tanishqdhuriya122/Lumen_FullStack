@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import axios from 'axios';
+import { API_BASE } from '../config';
 
 const CLOUD_NAME = "your-cloud-name";
 const UPLOAD_PRESET = "your-preset-name";

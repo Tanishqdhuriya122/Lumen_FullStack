@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import axios from 'axios';
 import SplashScreen from './SplashScreen';
+import { API_BASE } from '../config';
 
 export default function HomePage() {
   const [videos, setVideos] = useState([]);

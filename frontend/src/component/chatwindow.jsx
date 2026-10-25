@@ -11,6 +11,7 @@ import { useAuth } from './authcontext';
 import { useTheme } from './themecontext';
 import { useToast } from './ToastContext';
 import PulseLoader from './PulseLoader';
+import { API_BASE } from '../config';
 
 const API = `${API_BASE}/api/v1`;
 const authHeaders = () => ({ Authorization: `Bearer ${localStorage.getItem('token')}` });

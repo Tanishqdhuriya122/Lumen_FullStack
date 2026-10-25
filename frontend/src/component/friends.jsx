@@ -6,6 +6,7 @@ import { Smile, Image as ImageIcon, Send, ArrowLeft, Film } from 'lucide-react';
 import { useSocket } from './socketcontext';
 import { useAuth } from './authcontext';
 import PulseLoader from './PulseLoader';
+import { API_BASE } from '../config';
 
 const API = `${API_BASE}/api/v1`;
 

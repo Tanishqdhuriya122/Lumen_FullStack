@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import { X, Check, Send } from 'lucide-react';
 import { useSocket } from './socketcontext';
+import { API_BASE } from '../config';
 
 const API = `${API_BASE}/api/v1`;
 

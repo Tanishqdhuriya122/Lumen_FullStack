@@ -4,6 +4,7 @@ import { useAuth } from './authcontext';
 import axios from 'axios';
 import { Pencil, Video, Users, UserCheck, ListVideo, Plus, Trash2, Play } from 'lucide-react';
 import PulseLoader from './PulseLoader';
+import { API_BASE } from '../config';
 
 const panel = 'rounded-2xl border border-border bg-surface/80 backdrop-blur-md shadow-xl shadow-black/20';
 

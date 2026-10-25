@@ -12,6 +12,7 @@ import { useTheme } from './themecontext';
 import BackgroundPicker from './backgroundpicker';
 import NotesStrip from './notesstrip';
 import logo from '../assets/logo1.png';
+import { API_BASE } from '../config';
 
 const API = `${API_BASE}/api/v1/notifications`;
 

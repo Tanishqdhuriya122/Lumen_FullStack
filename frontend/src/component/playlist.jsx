@@ -5,6 +5,7 @@ import { Plus, X, Image as ImageIcon } from 'lucide-react';
 import CircularCarousel from './CircularCarousel';
 import { useAuth } from './authcontext';
 import { useToast } from './ToastContext';
+import { API_BASE } from '../config';
 
 const API = `${API_BASE}/api/v1/playlist`;
 

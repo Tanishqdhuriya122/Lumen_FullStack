@@ -7,6 +7,7 @@ import ShareVideoModal from './sharevideomodal';
 import { Share2 } from 'lucide-react';
 import PulseLoader from './PulseLoader';
 import { useToast } from './ToastContext';
+import { API_BASE } from '../config';
 
 export default function WatchVideo() {
   const { videoId } = useParams();

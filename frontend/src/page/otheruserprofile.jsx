@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { useAuth } from '../component/authcontext';
 import axios from 'axios';
+import { API_BASE } from '../config';
 
 export default function OtherProfile() {
   const { user } = useAuth();

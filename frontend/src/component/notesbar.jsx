@@ -4,6 +4,7 @@ import axios from 'axios';
 import { Plus, X } from 'lucide-react';
 import { useAuth } from './authcontext';
 import { useToast } from './ToastContext';
+import { API_BASE } from '../config';
 
 const API = `${API_BASE}/api/v1/notes`;
 

@@ -3,6 +3,7 @@ import axios from 'axios';
 import { X, Upload, Check } from 'lucide-react';
 import { useBackground, DEFAULT_BACKGROUND_CSS } from './backgroundcontext';
 import { useToast } from './ToastContext';
+import { API_BASE } from '../config';
 
 const API = `${API_BASE}/api/v1`;
 const MAX_MB = 8;

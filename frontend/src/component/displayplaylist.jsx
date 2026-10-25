@@ -4,6 +4,7 @@ import axios from 'axios';
 import { Plus, X, Search, Check, Trash2 } from 'lucide-react';
 import { useAuth } from './authcontext';
 import { useToast } from './ToastContext';
+import { API_BASE } from '../config';
 
 export default function ParticularPlaylist() {
   const navigate = useNavigate();

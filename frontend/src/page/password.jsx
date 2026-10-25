@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 import { useAuth } from '../component/authcontext';
+import { API_BASE } from '../config';
 
 export default function ChangePassword() {
   const [oldPassword, setOldPassword] = useState('');

@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import axios from 'axios';
 import Hls from 'hls.js';
 import { getHlsUrl } from './getHlsUrl';
+import { API_BASE } from '../config';
 
 const formatTime = (seconds) => {
   if (!isFinite(seconds) || seconds < 0) return '0:00';

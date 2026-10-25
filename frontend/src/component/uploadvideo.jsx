@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import axios from 'axios';
 import { UploadCloud, Film, Image as ImageIcon, X, CheckCircle2, Camera, Check } from 'lucide-react';
 import { useToast } from './ToastContext';
+import { API_BASE } from '../config';
 
 const API = `${API_BASE}/api/v1`;
 const MAX_VIDEO_MB = 100; // Cloudinary's free plan caps video uploads at 100MB; raise this if your plan allows more

@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import {
+import { API_BASE } from '../config';
   BarChart,
   Bar,
   LineChart,

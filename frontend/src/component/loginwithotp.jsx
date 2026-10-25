@@ -2,6 +2,7 @@ import React, { useState, useEffect, useRef } from 'react';
 import { useNavigate, Link } from 'react-router-dom';
 import axios from 'axios';
 import { useAuth } from '../component/authcontext';
+import { API_BASE } from '../config';
 
 const OTP_LENGTH = 6;
 const RESEND_COOLDOWN = 60;
